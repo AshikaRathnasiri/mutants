@@ -1,0 +1,17 @@
+page-product-details {
+    .list-md > .item-block:last-child .item-inner{
+        border-width: 0;
+    }
+    
+    .list-md .item-input:last-child{
+        border-width: 0;
+    }
+    
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+        color: black;
+    }
+
+    .text-input[disabled]{
+        opacity: 1;
+    }
+}

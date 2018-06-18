@@ -1,0 +1,24 @@
+page-user-profile {
+    .list-md > .item-block:last-child .item-inner{
+        border-width: 0;
+    }
+    
+    .list-md .item-input:last-child{
+        border-width: 0;
+    }
+    
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+        color: black;
+    }
+
+    .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child{
+        border-bottom: 0px solid #ffffff;
+        -webkit-box-shadow: inset 0 0px 0 0 #ffffff;
+        box-shadow: inset 0 0px 0 0 #ffffff;
+    }
+
+    .text-input[disabled]{
+        opacity: 1;
+    }
+}
+
