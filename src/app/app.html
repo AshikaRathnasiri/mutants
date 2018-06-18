@@ -6,31 +6,11 @@
     </ion-header>
 
     <ion-content>
-        <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button> -->
-        <!-- <ion-item>
-                <button (click)="openPage('ProductsPage')">Products</button>
-            </ion-item>
-            <ion-item>
-                <button (click)="openPage('ProductsPage')">Profile</button>
-            </ion-item>
-            <ion-item>
-                <button (click)="openPage('ProductsPage')">Logout</button>
-            </ion-item> -->
-        <!-- <ion-list>
-                <button ion-item *ngFor="let p of pages" (click)="openPage(p)" menuClose>
-                    {{p.title}}
-                </button>
-            </ion-list> -->
         <ion-list>
             <ion-item *ngFor="let p of pages" (click)="openPage(p)" menuClose>
                 {{p.title}}
             </ion-item>
         </ion-list>
-        <!-- <ion-list>
-                    <button ion-item  (click)="logout()">Logout</button>
-            </ion-list> -->
     </ion-content>
 
 </ion-menu>

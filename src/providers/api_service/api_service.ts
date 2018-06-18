@@ -12,10 +12,9 @@ export class ApiServiceProvider {
 
 
     /**
-  * Make get request to API
-  * @param {string} url - relative url of the request
-  * @param {boolean} authorized - true if authorization header is required
-  */
+    * Make get request to API
+    * @param {string} url - relative url of the request
+    */
     get(url: string) {
         return this.http.get( url )
             .map((response: Response) => response.json());

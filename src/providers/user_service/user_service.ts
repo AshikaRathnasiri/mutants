@@ -20,6 +20,7 @@ export class UserServiceProvider {
 
   }
 
+  
   /**
   * Authnticate the user with facebook and retrive his detials
   */
@@ -32,39 +33,29 @@ export class UserServiceProvider {
 
           firebase.auth().signInWithCredential(facebookCredential)
             .then(success => {
-              console.log("Firebase success: " + JSON.stringify(success));
               resolve(success);
             }).catch((err) => {
-              console.log('firebase error');
               reject(err);
             });
 
         }).catch((error) => {
-          console.log('fb login :', error);
           reject(error);
         });
     });
   }
 
 
+  /**
+  * Authnticate the user with google plus and retrive his detials
+  */
   authenticateWithGooglePlus() {
     return new Promise((resolve, reject) => {
       this.googlePlus.login({})
         .then(res => {
           resolve(res);
-          console.log('google plus auth', res);
-          // this.displayName = res.displayName;
-          // this.email = res.email;
-          // this.familyName = res.familyName;
-          // this.givenName = res.givenName;
-          // this.userId = res.userId;
-          // this.imageUrl = res.imageUrl;
-
-          // this.isLoggedIn = true;
         })
         .catch((err) =>{
           reject(err);
-          console.error('google plus err', err)
         });
     });
   }

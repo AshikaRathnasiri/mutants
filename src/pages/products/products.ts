@@ -24,43 +24,45 @@ export class ProductsPage {
     public productService: ProductServiceProvider) {
   }
 
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.productService.getProducts().subscribe((data) => {
 
+  /**
+   * Retrieve all products when init products page
+   */
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe((data) => {
       for (var key in data) {
         this.products.push(data[key]);
       }
-      console.log('name ::', this.products);
     }, (err) => {
       console.log(err);
     });
   }
 
 
+  /**
+   * Retrieve other data when scroll down the list
+   * @param infiniteScroll 
+   */
   doInfinite(infiniteScroll) {
-    console.log('Begin async operation');
-
     setTimeout(() => {
       this.productService.getProducts().subscribe((data) => {
- 
         for (var key in data) {
           this.products.push(data[key]);
         }
-        console.log('name ::', this.products);
       }, (err) => {
         console.log(err);
       });
 
-      console.log('Async operation has ended');
       infiniteScroll.complete();
     }, 500);
   }
 
 
+  /**
+   * Redirect to product details page
+   * @param item - product object
+   */
   productDetails(item : any){
-    console.log('item :',item);
     this.navCtrl.setRoot( ProductDetailsPage , {'product':item});
   }
 }

@@ -16,7 +16,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProductsPage } from '../pages/products/products';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
-import { ProductDetailsPage } from '../pages/product-details/product-details'
+import { ProductDetailsPage } from '../pages/product-details/product-details';
+import { Common } from '../app/common';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBdKoLalhQyDT_WgCGx_x-Xl-3iT6Cj04Y",
@@ -60,7 +61,8 @@ firebase.initializeApp(firebaseConfig);
     UserServiceProvider,
     ApiServiceProvider,
     ProductServiceProvider,
-    StorageServiceProvider
+    StorageServiceProvider,
+    Common
   ]
 })
 export class AppModule {}

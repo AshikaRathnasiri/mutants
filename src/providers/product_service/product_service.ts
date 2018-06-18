@@ -19,6 +19,5 @@ export class ProductServiceProvider {
         return this.apiService.get(this.url).map((response) => {
             return response.data;
         });
-
     }
 }

@@ -1,47 +1,69 @@
-<!--
-  Generated template for the ProductDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Product details</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-  <ion-list class="form">
+  <ion-list>
     <ion-item no-lines>
-      <ion-label>Name : </ion-label>
-      <!-- <ion-textarea [(ngModel)]="product.name"></ion-textarea> -->
-      <ion-input [(ngModel)]="product.name" disabled="true" type="text"></ion-input>
+      <ion-row class="bottom-pad">
+        <div class="wr-user">
+          <img src="assets/imgs/food.png">
+        </div>
+      </ion-row>
     </ion-item>
     <ion-item no-lines>
-      <ion-label>Description : </ion-label>
-      <!-- <ion-textarea [(ngModel)]="product.description"></ion-textarea> -->
-      <ion-input [(ngModel)]="product.description" disabled="true" type="text"></ion-input>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="no-padding">
+            <h3>Name : </h3>
+          </ion-col>
+          <ion-col col-8 class="left-padding">
+            <h3 style="white-space: normal;">{{product.name}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </ion-item>
     <ion-item no-lines>
-      <ion-label>Product Id : </ion-label>
-      <!-- <ion-textarea [(ngModel)]="product.productId"></ion-textarea> -->
-      <ion-input [(ngModel)]="product.productId" disabled="true" type="text"></ion-input>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="no-padding">
+            <h3>Description : </h3>
+          </ion-col>
+          <ion-col col-8 class="left-padding">
+            <h3 style="white-space: normal;">{{product.description}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
     <ion-item no-lines>
-      <ion-label>Price : </ion-label>
-      <!-- <ion-textarea [(ngModel)]="product.price"></ion-textarea> -->
-      <ion-input [(ngModel)]="product.price" disabled="true" type="text"></ion-input>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="no-padding">
+            <h3>Product Id :</h3>
+          </ion-col>
+          <ion-col col-8 class="left-padding">
+            <h3 style="white-space: normal;">{{product.productId}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
     <ion-item no-lines>
-      <ion-label>Shop Id : </ion-label>
-      <!-- <ion-textarea [(ngModel)]="product.shopId"></ion-textarea> -->
-      <ion-input [(ngModel)]="product.shopId" disabled="true" type="text"></ion-input>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="no-padding">
+            <h3>Price :</h3>
+          </ion-col>
+          <ion-col col-8 class="left-padding">
+            <h3 style="white-space: normal;">{{product.price}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
 </ion-content>

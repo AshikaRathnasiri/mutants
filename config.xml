@@ -85,6 +85,6 @@
         <variable name="APP_ID" value="2107309692874007" />
         <variable name="APP_NAME" value="mutants" />
     </plugin>
-    <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-googleplus" spec="^5.3.0" />
+    <engine name="android" spec="~6.3.0" />
 </widget>

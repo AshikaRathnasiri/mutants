@@ -14,4 +14,12 @@ page-product-details {
     .text-input[disabled]{
         opacity: 1;
     }
+
+    .no-padding{
+        padding: 0px;
+    }
+
+    .left-padding{
+        padding: 0px 0px 0px 5px;
+    }
 }
